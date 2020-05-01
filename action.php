@@ -25,20 +25,27 @@ class action_plugin_blockquote extends DokuWiki_Action_Plugin {
      * register the eventhandlers
      */
     function register(Doku_Event_Handler $controller) {
-        $controller->register_hook('TOOLBAR_DEFINE', 'AFTER', $this, 'blockquote_button', array ());
+        $controller->register_hook('TOOLBAR_DEFINE', 'AFTER', $this, 'blockquote_buttons', array ());
     }
 
     /**
      * Inserts a toolbar button
      */
-    function blockquote_button(Doku_Event $event, $param) {
+    function blockquote_buttons(Doku_Event $event, $param) {
         $event->data[] = array (
             'type' => 'format',
             'title' => $this->getLang('qb_blockquote'),
             'icon' => '../../plugins/blockquote/images/blockquote-icon.png',
             'open' => '<blockquote>',
             'close' => '</blockquote>',
-
+        );
+		
+		$event->data[] = array (
+            'type' => 'format',
+            'title' => $this->getLang('qb_cite'),
+            'icon' => '../../plugins/blockquote/images/cite-icon.png',
+            'open' => '<cite>',
+            'close' => '</cite>',
         );
 
         return true;

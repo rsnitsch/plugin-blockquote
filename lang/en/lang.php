@@ -8,3 +8,4 @@
  */
 
 $lang['qb_blockquote'] = 'Mark text as blockquote';
+$lang['qb_cite']       = 'Specify the source of a quote';

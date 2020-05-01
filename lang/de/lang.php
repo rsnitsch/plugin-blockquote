@@ -6,3 +6,4 @@
  * @author Tim Weinhold <tim.weinhold@gmail.com>
  */
 $lang['qb_blockquote']         = 'Markiere Text als Blockzitat';
+$lang['qb_cite']               = 'Gib die Quelle eines Zitats an';
